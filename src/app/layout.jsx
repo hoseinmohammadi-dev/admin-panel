@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
           <Box className="flex min-h-screen bg-(--color-bg) text-(--color-text)">
             <Box className="flex-1">
               <Header />
-              <main className="p-3">{children}</main>
+              <main className="container mx-auto p-3">{children}</main>
             </Box>
           </Box>
         </ThemeProvider>
