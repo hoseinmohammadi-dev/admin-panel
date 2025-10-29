@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+
+:root {
+  --color-bg: #1e1e2f;
+  --color-surface: #27293d;
+  --color-border: #3b3b57;
+  --color-primary: #7367f0;
+  --color-text: #e0e0e0;
+}
+
+@font-face {
+  font-family: 'GutonMedium';
+  src: url('/fonts/Guton-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GutonB';
+  src: url('/fonts/Guton-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'GutonMedium', sans-serif !important;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
