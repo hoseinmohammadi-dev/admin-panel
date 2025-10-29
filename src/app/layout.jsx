@@ -4,6 +4,7 @@ import theme from '@/theme';
 import '../app/globals.css';
 import Header from './components/Header';
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
           <Box className="flex min-h-screen bg-(--color-bg) text-(--color-text)">
             <Box className="flex-1">
               <Header />
-              <main className="p-6">{children}</main>
+              <main className="p-3">{children}</main>
             </Box>
           </Box>
         </ThemeProvider>

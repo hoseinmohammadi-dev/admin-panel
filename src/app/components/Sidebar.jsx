@@ -31,28 +31,28 @@ export default function Sidebar() {
             <section
                 className={`fixed top-16 left-0 h-full w-50 bg-(--color-surface) font-bold z-50 transform transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}
             >
-                <Box className='p-4 space-y-3 *:rounded-lg **:p-2 **:hover:bg-(--color-bg)'>
-                    <Button>
+                <Box className='p-4 space-y-3 *:rounded-lg **:p-2'>
+                    <Button onClick={() => setOpen(false)}>
                         <SpeedIcon sx={{fontSize:40}} />
                         <Typography  >Dashboard</Typography>
                     </Button>
 
-                    <Button>
+                    <Button onClick={() => setOpen(false)}>
                         <DashboardIcon sx={{fontSize:40}} />
                         <Typography  >Lifecycle</Typography>
                     </Button>
 
-                    <Button>
+                    <Button onClick={() => setOpen(false)}>
                         <BarChartIcon sx={{fontSize:40}} />
                         <Typography  >Analytics</Typography>
                     </Button>
 
-                    <Button>
+                    <Button onClick={() => setOpen(false)}>
                         <FolderOpenIcon sx={{fontSize:40}} />
                         <Typography  >Project</Typography>
                     </Button>
 
-                    <Button>
+                    <Button onClick={() => setOpen(false)}>
                         <GroupIcon sx={{fontSize:40}} />
                         <Typography  >Team</Typography>
                     </Button>
