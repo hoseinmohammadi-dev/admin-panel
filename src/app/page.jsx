@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       {/* sec1 */}
-      <section className="container mx-auto flex flex-col lg:flex-row gap-2.5">
+      <section className=" flex flex-col lg:flex-row gap-2.5">
         {/* part 1,2 */}
         <section className="w-full flex flex-col sm:flex-row gap-2.5 *:rounded-xl *:p-2">
           <section className="relative w-full h-40 md:w-[50%] bg-(--color-surface) p-5">
@@ -48,7 +48,7 @@ export default function HomePage() {
               <Typography variant="h5">Transactions</Typography>
               <Typography variant="body2">Total 48.5% Growth 😎 this month</Typography>
             </div>
-            <div><KebabMenu /></div>
+            <div><KebabMenu MySlice={[0,3]}/></div>
           </div>
 
           <div className="flex justify-start gap-3 sm:gap-15 pr-10">
@@ -77,6 +77,28 @@ export default function HomePage() {
         </section>
       </section>
       {/* end sec1 */}
+
+      {/* sec 2 */}
+      <section className=" flex flex-col lg:flex-row gap-2.5 my-2.5">
+        <section className="w-full flex flex-col sm:flex-row gap-2.5 *:rounded-xl *:p-2">
+          <section className="relative w-full h-40 md:w-[50%] bg-(--color-surface) p-5">
+
+          </section>
+          <section className="relative w-full h-40 md:w-[50%] bg-(--color-surface) p-5">
+
+          </section>
+        </section>
+
+
+        <section className="w-full lg:w-[69%] ">
+          <section component="section" className=" h-40 bg-(--color-surface) rounded-xl p-5">
+              <div  className="flex justify-between">
+                <Typography variant="h5">Sales Overview</Typography>
+                <KebabMenu MySlice={[3,6]}/>
+              </div>
+          </section>
+        </section>
+      </section>
     </>
   );
 }

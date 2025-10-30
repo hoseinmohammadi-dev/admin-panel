@@ -8,11 +8,14 @@ const options = [
   'Refresh',
   'Share',
   'Update',
+  'Last 28 Days',
+  'Last Month',
+  'Last Years',
 ];
 
 const ITEM_HEIGHT = 48;
 
-export default function KebabMenu() {
+export default function KebabMenu({MySlice}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -51,7 +54,7 @@ export default function KebabMenu() {
           },
         }}
       >
-        {options.map((option) => (
+        {options.slice(...MySlice).map((option) => (
           <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
             {option}
           </MenuItem>
