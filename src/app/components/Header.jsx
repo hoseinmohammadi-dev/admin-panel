@@ -23,7 +23,7 @@ export default function Header() {
                     {/* <h1>Materio</h1> */}
                 </Box>
 
-                <Avatar alt="Remy Sharp" src="/avatars/1.png" />
+                <Avatar alt="Remy Sharp" src="/avatars/one.png" />
 
             </Toolbar>
         </AppBar>
