@@ -9,6 +9,7 @@ import Image from "next/image";
 import WalletIcon from '@mui/icons-material/Wallet';
 import LineChartComponent from "./components/LineChartComponent";
 import BarChartComponent from "./components/BarChartComponent";
+import LineChartComponent2 from "./components/LineChartComponent2";
 
 export default function HomePage() {
   return (
@@ -163,6 +164,39 @@ export default function HomePage() {
               </Box>
             </div>
           </div>
+        </section>
+      </section>
+      {/* end sec2 */}
+
+      {/* sec 3 */}
+      <section className=" flex flex-col lg:flex-row gap-2.5 my-2.5 w-full *:lg:w-[50%] *:h-100">
+        {/* part 1 */}
+        <section className="bg-(--color-surface) rounded-xl">1</section>
+        <section className="flex flex-col md:flex-row gap-2.5">
+          {/* part 2 */}
+          <section className="w-[60%] bg-(--color-surface) rounded-xl p-2.5">
+
+          </section>
+          {/* part 3,4 */}
+          <section className="flex flex-row md:flex-col gap-2.5 w-full  md:w-[40%] *:rounded-xl *:bg-(--color-surface)">
+            <section className="p-2 w-full ">
+              <Typography variant="h5">42.5K</Typography>
+              <LineChartComponent2 />
+              <Typography sx={{ textAlign: 'center' }}>Total Growth</Typography>
+            </section>
+            <section className="p-4 md:p-2.5 w-full">
+              <div className="flex justify-between mb-6 md:mb-2">
+                <MiniIcon MyIcon={WalletIcon} color={'#8350ef'}/>
+                <KebabMenu MySlice={[0, 3]} />
+              </div>
+              <Typography>New Project</Typography>
+              <div className="flex items-center gap-2 my-2.5">
+                <Typography variant="h5">862</Typography>
+                <Typography sx={{color:'#f5484e'}} variant="body2">-18%</Typography>
+              </div>
+              <Typography variant="body2">Yearly Project</Typography>
+            </section>
+          </section>
         </section>
       </section>
     </>
