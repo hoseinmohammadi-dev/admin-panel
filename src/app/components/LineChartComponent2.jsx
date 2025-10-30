@@ -3,13 +3,11 @@ import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
   { name: 'Feb', value: 0 },
-  { name: 'Mar', value: 50 },
-  { name: 'Apr', value: 30 },
-  { name: 'May', value: 60 },
-  { name: 'Jun', value: 75 },
-  { name: 'Jun', value: 65 },
-  { name: 'Jun', value: 80 },
-  { name: 'Jun', value: 120 },
+  { name: 'Mar', value: 60 },
+  { name: 'Apr', value: 20 },
+  { name: 'May', value: 100 },
+  { name: 'Jun', value: 50 },
+  { name: 'Jun', value: 150 },
 ];
 
 export default function LineChartComponent2() {

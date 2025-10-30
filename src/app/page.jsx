@@ -12,6 +12,7 @@ import BarChartComponent from "./components/BarChartComponent";
 import LineChartComponent2 from "./components/LineChartComponent2";
 import WeekChart from "./components/WeekChart";
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import BasicTimeline from "./components/TimeLine";
 
 export default function HomePage() {
   return (
@@ -171,9 +172,12 @@ export default function HomePage() {
       {/* end sec2 */}
 
       {/* sec 3 */}
-      <section className=" flex flex-col lg:flex-row gap-2.5 my-2.5 w-full *:lg:w-[50%] *:h-100">
+      <section className=" flex flex-col lg:flex-row gap-2.5 my-2.5 w-full *:lg:w-[50%]">
         {/* part 1 */}
-        <section className="bg-(--color-surface) rounded-xl">1</section>
+        <section className="bg-(--color-surface) rounded-xl p-5">
+          <Typography variant="h5" sx={{marginLeft:'18px', marginBottom:'15px'}}>Activity Timeline</Typography>
+          <BasicTimeline />
+        </section>
         <section className="flex flex-col md:flex-row gap-2.5">
           {/* part 2 */}
           <section className="w-full md:w-[60%] bg-(--color-surface) rounded-xl p-2.5">
