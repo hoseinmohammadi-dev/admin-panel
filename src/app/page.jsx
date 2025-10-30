@@ -1,11 +1,13 @@
 'use client';
-import { Typography } from "@mui/material";
+import { Badge, Box, Typography } from "@mui/material";
 import KebabMenu from "./components/KebabMenu";
 import MiniIcon from "./components/MiniIcon";
 import PieChartIcon from '@mui/icons-material/PieChart';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import ComputerIcon from '@mui/icons-material/Computer';
 import Image from "next/image";
+import WalletIcon from '@mui/icons-material/Wallet';
+import LineChartComponent from "./components/LineChartComponent";
 
 export default function HomePage() {
   return (
@@ -48,7 +50,7 @@ export default function HomePage() {
               <Typography variant="h5">Transactions</Typography>
               <Typography variant="body2">Total 48.5% Growth 😎 this month</Typography>
             </div>
-            <div><KebabMenu MySlice={[0,3]}/></div>
+            <div><KebabMenu MySlice={[0, 3]} /></div>
           </div>
 
           <div className="flex justify-start gap-3 sm:gap-15 pr-10">
@@ -91,11 +93,57 @@ export default function HomePage() {
 
 
         <section className="w-full lg:w-[69%] ">
-          <section component="section" className=" h-40 bg-(--color-surface) rounded-xl p-5">
-              <div  className="flex justify-between">
-                <Typography variant="h5">Sales Overview</Typography>
-                <KebabMenu MySlice={[3,6]}/>
+          <section className="bg-(--color-surface) rounded-xl p-5">
+            <div className="flex justify-between">
+              <Typography variant="h5">Sales Overview</Typography>
+              <KebabMenu MySlice={[3, 6]} />
+            </div>
+            <div className="flex items-center justify-center gap-2.5 mt-2.5">
+              <MiniIcon MyIcon={WalletIcon} color={'#8350ef'} />
+              <div>
+                <Typography>Number of Sales</Typography>
+                <Typography variant="h6">$86,400</Typography>
               </div>
+            </div>
+            <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-white/10 my-3" />
+            <div>
+              <div className="flex justify-center gap-25 mb-5">
+                <Box display="flex" flexDirection="column" alignItems="center">
+                  <Box display="flex" alignItems="center" gap={1}>
+                    <Box
+                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
+                  <Typography variant="h6">Apparel</Typography>
+                  </Box>
+                  <Typography>$12,150</Typography>
+                </Box>
+                <Box display="flex" flexDirection="column" alignItems="center">
+                  <Box display="flex" alignItems="center" gap={1}>
+                    <Box
+                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
+                  <Typography variant="h6">Electronics</Typography>
+                  </Box>
+                  <Typography>24,900</Typography>
+                </Box>
+              </div>
+              <div className="flex justify-center gap-25">
+                <Box display="flex" flexDirection="column" alignItems="center">
+                  <Box display="flex" alignItems="center" gap={1}>
+                    <Box
+                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
+                  <Typography variant="h6">FMCG</Typography>
+                  </Box>
+                  <Typography>$12,750</Typography>
+                </Box>
+                <Box display="flex" flexDirection="column" alignItems="center">
+                  <Box display="flex" alignItems="center" gap={1}>
+                    <Box
+                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
+                  <Typography variant="h6">Other Sales</Typography>
+                  </Box>
+                  <Typography>$50,200</Typography>
+                </Box>
+              </div>
+            </div>
           </section>
         </section>
       </section>
