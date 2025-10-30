@@ -12,7 +12,7 @@ const data = [
 
 export default function LineChartComponent() {
   return (
-    <div className="bg-[#2c2943] p-4 rounded-2xl shadow-md w-full h-64">
+    <div className="p-4 w-full h-64 mt-7">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data}>
           <XAxis

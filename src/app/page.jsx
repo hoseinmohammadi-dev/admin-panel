@@ -1,5 +1,5 @@
 'use client';
-import { Badge, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import KebabMenu from "./components/KebabMenu";
 import MiniIcon from "./components/MiniIcon";
 import PieChartIcon from '@mui/icons-material/PieChart';
@@ -8,6 +8,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import Image from "next/image";
 import WalletIcon from '@mui/icons-material/Wallet';
 import LineChartComponent from "./components/LineChartComponent";
+import BarChartComponent from "./components/BarChartComponent";
 
 export default function HomePage() {
   return (
@@ -82,69 +83,86 @@ export default function HomePage() {
 
       {/* sec 2 */}
       <section className=" flex flex-col lg:flex-row gap-2.5 my-2.5">
-        <section className="w-full flex flex-col sm:flex-row gap-2.5 *:rounded-xl *:p-2">
-          <section className="relative w-full h-40 md:w-[50%] bg-(--color-surface) p-5">
-
+        {/* part 1 */}
+        <section className="w-full flex flex-col sm:flex-row gap-2.5 *:rounded-xl">
+          <section className="w-full md:w-[50%] bg-(--color-surface) p-5">
+            <section className="bg-(--color-surface) rounded-xl ">
+              <div className="flex justify-between items-center">
+                <Typography variant="h5">Revenue Report</Typography>
+                <KebabMenu MySlice={[3, 6]} />
+              </div>
+              <div>
+                <LineChartComponent />
+              </div>
+            </section>
           </section>
-          <section className="relative w-full h-40 md:w-[50%] bg-(--color-surface) p-5">
 
+          {/* part 2 */}
+          <section className="w-full md:w-[50%] bg-(--color-surface) p-4">
+            <section className="bg-(--color-surface) rounded-xl ">
+              <div className="flex justify-between items-center">
+                <Typography variant="h5">Revenue Report</Typography>
+                <KebabMenu MySlice={[3, 6]} />
+              </div>
+              <div>
+                <BarChartComponent />
+              </div>
+            </section>
           </section>
         </section>
 
-
-        <section className="w-full lg:w-[69%] ">
-          <section className="bg-(--color-surface) rounded-xl p-5">
-            <div className="flex justify-between">
-              <Typography variant="h5">Sales Overview</Typography>
-              <KebabMenu MySlice={[3, 6]} />
-            </div>
-            <div className="flex items-center justify-center gap-2.5 mt-2.5">
-              <MiniIcon MyIcon={WalletIcon} color={'#8350ef'} />
-              <div>
-                <Typography>Number of Sales</Typography>
-                <Typography variant="h6">$86,400</Typography>
-              </div>
-            </div>
-            <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-white/10 my-3" />
+        {/* part 3 */}
+        <section className="w-full lg:w-[66.5%] h-[370px] bg-(--color-surface) rounded-xl p-5">
+          <div className="flex justify-between items-center mb-10">
+            <Typography variant="h5">Sales Overview</Typography>
+            <KebabMenu MySlice={[3, 6]} />
+          </div>
+          <div className="flex items-center justify-center gap-2.5 mt-2.5">
+            <MiniIcon MyIcon={WalletIcon} color={'#8350ef'} />
             <div>
-              <div className="flex justify-center gap-25 mb-5">
-                <Box display="flex" flexDirection="column" alignItems="center">
-                  <Box display="flex" alignItems="center" gap={1}>
-                    <Box
-                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
-                  <Typography variant="h6">Apparel</Typography>
-                  </Box>
-                  <Typography>$12,150</Typography>
-                </Box>
-                <Box display="flex" flexDirection="column" alignItems="center">
-                  <Box display="flex" alignItems="center" gap={1}>
-                    <Box
-                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
-                  <Typography variant="h6">Electronics</Typography>
-                  </Box>
-                  <Typography>24,900</Typography>
-                </Box>
-              </div>
-              <div className="flex justify-center gap-25">
-                <Box display="flex" flexDirection="column" alignItems="center">
-                  <Box display="flex" alignItems="center" gap={1}>
-                    <Box
-                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
-                  <Typography variant="h6">FMCG</Typography>
-                  </Box>
-                  <Typography>$12,750</Typography>
-                </Box>
-                <Box display="flex" flexDirection="column" alignItems="center">
-                  <Box display="flex" alignItems="center" gap={1}>
-                    <Box
-                    sx={{width: 11,height: 11,borderRadius: '50%',bgcolor: 'primary.main',flexShrink: 0,}}/>
-                  <Typography variant="h6">Other Sales</Typography>
-                  </Box>
-                  <Typography>$50,200</Typography>
-                </Box>
-              </div>
+              <Typography>Number of Sales</Typography>
+              <Typography variant="h6">$86,400</Typography>
             </div>
-          </section>
+          </div>
+          <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-white/10 my-3" />
+          <div>
+            <div className="flex justify-center gap-25 mb-5">
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Box display="flex" alignItems="center" gap={1}>
+                  <Box
+                    sx={{ width: 11, height: 11, borderRadius: '50%', bgcolor: 'primary.main', flexShrink: 0, }} />
+                  <Typography variant="h6">Apparel</Typography>
+                </Box>
+                <Typography>$12,150</Typography>
+              </Box>
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Box display="flex" alignItems="center" gap={1}>
+                  <Box
+                    sx={{ width: 11, height: 11, borderRadius: '50%', bgcolor: 'primary.main', flexShrink: 0, }} />
+                  <Typography variant="h6">Electronics</Typography>
+                </Box>
+                <Typography>24,900</Typography>
+              </Box>
+            </div>
+            <div className="flex justify-center gap-25">
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Box display="flex" alignItems="center" gap={1}>
+                  <Box
+                    sx={{ width: 11, height: 11, borderRadius: '50%', bgcolor: 'primary.main', flexShrink: 0, }} />
+                  <Typography variant="h6">FMCG</Typography>
+                </Box>
+                <Typography>$12,750</Typography>
+              </Box>
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Box display="flex" alignItems="center" gap={1}>
+                  <Box
+                    sx={{ width: 11, height: 11, borderRadius: '50%', bgcolor: 'primary.main', flexShrink: 0, }} />
+                  <Typography variant="h6">Other Sales</Typography>
+                </Box>
+                <Typography>$50,200</Typography>
+              </Box>
+            </div>
+          </div>
         </section>
       </section>
     </>
