@@ -26,7 +26,7 @@ export default function LineChartComponent2() {
               
               border: 'none',
               borderRadius: '8px',
-              color: '#fff',
+              color: '#27293d',
             }}
           />
           <Line
