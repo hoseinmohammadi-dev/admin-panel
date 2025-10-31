@@ -17,13 +17,12 @@ export default function LineChartComponent2() {
         <LineChart data={data}>
           <XAxis
             dataKey="name"
-            stroke="#27293d"
+            stroke="var(--color-text)"
             tickLine={false}
             axisLine={false}
           />
           <Tooltip
             contentStyle={{
-              
               border: 'none',
               borderRadius: '8px',
               color: '#27293d',
