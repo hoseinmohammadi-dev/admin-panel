@@ -23,7 +23,7 @@ export default function HomePage() {
         <section className="w-full flex flex-col sm:flex-row gap-2.5 *:rounded-xl *:p-2">
           <section className="relative w-full h-40 md:w-[50%] bg-(--color-surface) p-5">
             <div className="w-[70%]">
-              <Image src="/Avatars/9.png" width={125} height={100} alt="one person" className="absolute -right-2 bottom-0" />
+              <Image src="/Avatar/9.png" width={125} height={100} alt="one person" className="absolute -right-2 bottom-0" />
               <div className="pl-3.5 md:pl-0 lg:pl-1">
                 <Typography variant="h6">Ratings</Typography>
                 <div className="flex items-center gap-1.5 my-2">
@@ -36,7 +36,7 @@ export default function HomePage() {
           </section>
           <section className="relative w-full h-40 md:w-[50%] bg-(--color-surface) p-5">
             <div className="w-[70%]">
-              <Image src="/Avatars/10.png" width={100} height={100} alt="one person" className="absolute right-15 sm:-right-1 bottom-0" />
+              <Image src="/Avatar/10.png" width={100} height={100} alt="one person" className="absolute right-15 sm:-right-1 bottom-0" />
               <div className="pl-3.5 md:pl-0 lg:pl-1">
                 <Typography variant="h6">Sessions</Typography>
                 <div className="flex items-center gap-1.5 my-2">
