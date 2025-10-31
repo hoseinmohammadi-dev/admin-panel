@@ -31,7 +31,7 @@ export default function LineChartComponent2() {
           <Line
             type="monotone"
             dataKey="value"
-            stroke="#7fff00"
+            stroke="#449928"
             strokeWidth={4}
             dot={false}
           />

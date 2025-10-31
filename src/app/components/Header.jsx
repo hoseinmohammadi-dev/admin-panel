@@ -31,7 +31,7 @@ export default function Header({ mode, toggleMode }) {
                     <IconButton onClick={toggleMode} sx={{ color: 'var(--color-primary)' }}>
                         {mode === 'dark' ? <Brightness7Icon sx={{ color: 'inherit' }} /> : <Brightness4Icon sx={{ color: 'inherit' }} />}
                     </IconButton>
-                    <Avatar alt="Remy Sharp" src="/avatars/one.png" />
+                    <Avatar alt="Remy Sharp" src="/avatar/one.png" />
                 </Box>
 
             </Toolbar>

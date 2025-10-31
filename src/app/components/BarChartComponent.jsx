@@ -38,7 +38,7 @@ export default function BarChartComponent() {
             verticalAlign="bottom"
             height={36}
           />
-          <Bar dataKey="earning" fill="#7fff00" radius={[10, 10, 0, 0]} />
+          <Bar dataKey="earning" fill="#449928" radius={[10, 10, 0, 0]} />
           <Bar dataKey="expense" fill="#9ca3af" radius={[10, 10, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>

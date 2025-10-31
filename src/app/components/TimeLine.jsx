@@ -55,7 +55,7 @@ export default function BasicTimeline() {
                         </div>
                         <Typography variant='body2' sx={{ color: 'var(--color-text)' }}>Project meeting with john @10:15am</Typography>
                         <div className='flex items-center gap-1.5 mt-3'>
-                            <Avatar alt="Remy Sharp" src="/avatars/one.png" sx={{ width: 25, height: 25, }} />
+                            <Avatar alt="Remy Sharp" src="/avatar/one.png" sx={{ width: 25, height: 25, }} />
                             <div>
                                 <Typography sx={{ fontSize: '12px' ,color: 'var(--color-text)' }}>Lester McCarthy (Client)</Typography>
                                 <Typography sx={{ fontSize: '12px' ,color: 'var(--color-text)' }}>CEO of ThemeSelection</Typography>

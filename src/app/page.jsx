@@ -28,7 +28,7 @@ export default function HomePage() {
                 <Typography variant="h6">Ratings</Typography>
                 <div className="flex items-center gap-1.5 my-2">
                   <Typography variant="h4">13k</Typography>
-                  <Typography sx={{ color: '#44a50f' }}>+15.6%</Typography>
+                  <Typography sx={{ color: '#449928' }}>+15.6%</Typography>
                 </div>
                 <p className="w-28 bg-(--color-primary) text-(--color-text) p-0.5 rounded-2xl text-center">Year of 2025</p>
               </div>
@@ -67,7 +67,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <div><MiniIcon MyIcon={SupervisorAccountIcon} color={'#56ca00'} /></div>
+              <div><MiniIcon MyIcon={SupervisorAccountIcon} color={'#449928'} /></div>
               <div>
                 <Typography>Users</Typography>
                 <Typography variant="h6">12.5k</Typography>
@@ -198,7 +198,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <div><MiniIcon MyIcon={CurrencyExchangeIcon} color={'#56ca00'} /></div>
+                <div><MiniIcon MyIcon={CurrencyExchangeIcon} color={'#449928'} /></div>
                 <div>
                   <Typography>34.6k</Typography>
                   <Typography variant="body2">Total Profit</Typography>
