@@ -30,7 +30,7 @@ export default function HomePage() {
                   <Typography variant="h4">13k</Typography>
                   <Typography sx={{ color: '#44a50f' }}>+15.6%</Typography>
                 </div>
-                <p className="w-28 bg-(--color-primary) p-0.5 rounded-2xl text-center">Year of 2025</p>
+                <p className="w-28 bg-(--color-primary) text-[var(--color-text)] p-0.5 rounded-2xl text-center">Year of 2025</p>
               </div>
             </div>
           </section>

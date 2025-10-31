@@ -33,12 +33,12 @@ export default function BasicTimeline() {
                     <TimelineContent>
                         <div className='flex items-center justify-between'>
                             <Typography variant='h6'>12 Invoices have been paid</Typography>
-                            <Typography variant='body2' sx={{ color: '#bab8bf', marginTop: '15px' }}>12 min ago</Typography>
+                            <Typography variant='body2' sx={{ color: 'var(--color-text)', marginTop: '15px' }}>12 min ago</Typography>
                         </div>
-                        <Typography variant='body2' sx={{ color: '#bab8bf' }}>Invoices have been paid to the company</Typography>
+                        <Typography variant='body2' sx={{ color: 'var(--color-text)' }}>Invoices have been paid to the company</Typography>
                         <div className='w-30 flex items-center gap-1.5 px-2 py-1  bg-black/10 rounded-lg mt-3'>
                             <Image src="/icon/pdf.png" width={15} height={15} alt="pdf"></Image>
-                            <Typography variant='body2' sx={{ color: '#bab8bf' }}>invoices.pdf</Typography>
+                            <Typography variant='body2' sx={{ color: 'var(--color-text)' }}>invoices.pdf</Typography>
                         </div>
                     </TimelineContent>
                 </TimelineItem>
@@ -51,14 +51,14 @@ export default function BasicTimeline() {
                     <TimelineContent>
                         <div className='flex items-center justify-between'>
                             <Typography variant='h6'>Client Meeting</Typography>
-                            <Typography variant='body2' sx={{ color: '#bab8bf', marginTop: '15px' }}>45 min ago</Typography>
+                            <Typography variant='body2' sx={{ color: 'var(--color-text)', marginTop: '15px' }}>45 min ago</Typography>
                         </div>
-                        <Typography variant='body2' sx={{ color: '#bab8bf' }}>Project meeting with john @10:15am</Typography>
+                        <Typography variant='body2' sx={{ color: 'var(--color-text)' }}>Project meeting with john @10:15am</Typography>
                         <div className='flex items-center gap-1.5 mt-3'>
                             <Avatar alt="Remy Sharp" src="/avatars/one.png" sx={{ width: 25, height: 25, }} />
                             <div>
-                                <Typography sx={{ fontSize: '12px' ,color: '#bab8bf' }}>Lester McCarthy (Client)</Typography>
-                                <Typography sx={{ fontSize: '12px' ,color: '#bab8bf' }}>CEO of ThemeSelection</Typography>
+                                <Typography sx={{ fontSize: '12px' ,color: 'var(--color-text)' }}>Lester McCarthy (Client)</Typography>
+                                <Typography sx={{ fontSize: '12px' ,color: 'var(--color-text)' }}>CEO of ThemeSelection</Typography>
                             </div>
                         </div>
                     </TimelineContent>
@@ -72,9 +72,9 @@ export default function BasicTimeline() {
                     <TimelineContent>
                         <div className='flex items-center justify-between'>
                             <Typography variant='h6'>Create a new project</Typography>
-                            <Typography variant='body2' sx={{ color: '#bab8bf', marginTop: '15px' }}>2 Day Ago</Typography>
+                            <Typography variant='body2' sx={{ color: 'var(--color-text)', marginTop: '15px' }}>2 Day Ago</Typography>
                         </div>
-                        <Typography variant='body2' sx={{ color: '#bab8bf' }}>6 team members in a project</Typography>
+                        <Typography variant='body2' sx={{ color: 'var(--color-text)' }}>6 team members in a project</Typography>
                     </TimelineContent>
                 </TimelineItem>
             </Timeline>

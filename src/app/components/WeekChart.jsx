@@ -16,39 +16,36 @@ export default function WeekChart() {
       style={{
         width: '100%',
         height: 200,
-        background: '#2a2543',
+        background: 'var(--color-surface)',
         borderRadius: '12px',
         padding: '10px',
       }}
     >
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data} barSize={30}>
-          {/* خط عمودی وسط چارت */}
-          <ReferenceLine x="W" stroke="#3b3fff" strokeWidth={1.5} />
-          
-          {/* محور پایین (روزها) */}
+          <ReferenceLine x="W" stroke="var(--color-primary)" strokeWidth={1.5} />
+
           <XAxis
             dataKey="name"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: '#b5b2c5', fontSize: 12 }}
+            tick={{ fill: 'var(--color-text)', fontSize: 12 }}
           />
 
-          {/* ستون‌ها */}
           <Bar
             dataKey="value"
             radius={[4, 4, 0, 0]}
-            fill="#5f4b8b"
+            fill="var(--color-primary)"
             shape={(props) => {
               const { x, y, width, height, fill, payload } = props;
-              const active = payload.name === 'T'; // روز فعال
+              const active = payload.name === 'T';
               return (
                 <rect
                   x={x}
                   y={y}
                   width={width}
                   height={height}
-                  fill={active ? '#9b5cff' : fill}
+                  fill={active ? 'var(--color-primary)' : fill}
                   rx={6}
                 />
               );

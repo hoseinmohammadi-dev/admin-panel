@@ -7,7 +7,7 @@ const data = [
   { name: 'Apr', value: 20 },
   { name: 'May', value: 100 },
   { name: 'Jun', value: 50 },
-  { name: 'Jun', value: 150 },
+  { name: 'Aug', value: 150 },
 ];
 
 export default function LineChartComponent2() {

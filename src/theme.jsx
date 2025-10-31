@@ -1,7 +1,17 @@
 'use client';
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+const baseTheme = {
+  shape: {
+    borderRadius: 12,
+  },
+  typography: {
+    fontFamily: 'GutonMedium, Inter, sans-serif',
+  },
+};
+
+export const darkTheme = createTheme({
+  ...baseTheme,
   palette: {
     mode: 'dark',
     background: {
@@ -15,16 +25,31 @@ const theme = createTheme({
       main: '#9c27b0',
     },
     text: {
-      primary: '#e0e0e0',
-      secondary: '#b0b0b0',
+      primary: '#b0b0b0',
+      secondary: '#e0e0e0',
     },
-  },
-  shape: {
-    borderRadius: 12,
-  },
-  typography: {
-    fontFamily: 'GutonMedium, Inter, sans-serif',
   },
 });
 
-export default theme;
+export const lightTheme = createTheme({
+  ...baseTheme,
+  palette: {
+    mode: 'light',
+    background: {
+      default: '#d9d9e1',
+      paper: '#ffffff',
+    },
+    primary: {
+      main: '#7367f0',
+    },
+    secondary: {
+      main: '#9c27b0',
+    },
+    text: {
+      primary: '#2c2c2c',
+      secondary: '#666666',
+    },
+  },
+});
+
+export default darkTheme;

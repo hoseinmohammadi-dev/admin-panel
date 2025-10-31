@@ -9,6 +9,14 @@
   --color-text: #e0e0e0;
 }
 
+:root[data-theme="light"] {
+  --color-bg: #e7e7e7fb;
+  --color-surface: #efefef;
+  --color-border: #e0e0e0;
+  --color-primary: #7367f0;
+  --color-text: #2c2c2c;
+}
+
 @font-face {
   font-family: 'GutonMedium';
   src: url('/fonts/Guton-Medium.woff2') format('woff2');
