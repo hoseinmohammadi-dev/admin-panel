@@ -174,7 +174,7 @@ export default function HomePage() {
       {/* sec 3 */}
       <section className=" flex flex-col lg:flex-row gap-2.5 my-2.5 w-full *:lg:w-[50%]">
         {/* part 1 */}
-        <section className="bg-(--color-surface) rounded-xl p-5">
+        <section className="bg-(--color-surface) rounded-xl py-3">
           <Typography variant="h5" sx={{marginLeft:'18px', marginBottom:'15px'}}>Activity Timeline</Typography>
           <BasicTimeline />
         </section>

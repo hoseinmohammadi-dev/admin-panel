@@ -71,7 +71,7 @@ export default function BasicTimeline() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <div className='flex items-center justify-between'>
-                            <Typography variant='h6'>Create a new project for client</Typography>
+                            <Typography variant='h6'>Create a new project</Typography>
                             <Typography variant='body2' sx={{ color: '#bab8bf', marginTop: '15px' }}>2 Day Ago</Typography>
                         </div>
                         <Typography variant='body2' sx={{ color: '#bab8bf' }}>6 team members in a project</Typography>
