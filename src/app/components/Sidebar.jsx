@@ -7,10 +7,18 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
-import GroupIcon from '@mui/icons-material/Group';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { useRouter } from 'next/navigation';
+
 
 export default function Sidebar() {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const router = useRouter();
+
+    const handleLogout = () => {
+        setOpen(false);
+        router.push('/');
+    };
 
     return (
         <>
@@ -33,28 +41,28 @@ export default function Sidebar() {
             >
                 <Box className='p-4 space-y-3 *:rounded-lg **:p-2'>
                     <Button onClick={() => setOpen(false)}>
-                        <SpeedIcon sx={{fontSize:40}} />
+                        <SpeedIcon sx={{ fontSize: 40 }} />
                         <Typography  >Dashboard</Typography>
                     </Button>
 
                     <Button onClick={() => setOpen(false)}>
-                        <DashboardIcon sx={{fontSize:40}} />
+                        <DashboardIcon sx={{ fontSize: 40 }} />
                         <Typography  >Lifecycle</Typography>
                     </Button>
 
                     <Button onClick={() => setOpen(false)}>
-                        <BarChartIcon sx={{fontSize:40}} />
+                        <BarChartIcon sx={{ fontSize: 40 }} />
                         <Typography  >Analytics</Typography>
                     </Button>
 
                     <Button onClick={() => setOpen(false)}>
-                        <FolderOpenIcon sx={{fontSize:40}} />
+                        <FolderOpenIcon sx={{ fontSize: 40 }} />
                         <Typography  >Project</Typography>
                     </Button>
 
-                    <Button onClick={() => setOpen(false)}>
-                        <GroupIcon sx={{fontSize:40}} />
-                        <Typography  >Team</Typography>
+                    <Button onClick={handleLogout} sx={{ bgcolor:'var(--color-bg)' }}>
+                        <LogoutIcon sx={{ fontSize: 40 }} />
+                        <Typography>Logout</Typography>
                     </Button>
                 </Box>
             </section>
