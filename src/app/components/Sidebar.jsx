@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box, Button, Typography } from '@mui/material';
 import SpeedIcon from '@mui/icons-material/Speed';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -14,6 +14,26 @@ import { useRouter } from 'next/navigation';
 export default function Sidebar() {
     const [open, setOpen] = useState(false);
     const router = useRouter();
+
+    const handleDashboard = () =>{
+        setOpen(false);
+        router.push('/dashboard')
+    }
+
+    const handleUserData = () =>{
+        setOpen(false);
+        router.push('/user')
+    }
+
+    const handleAnalytics = () =>{
+        setOpen(false);
+        router.push('/analytics')
+    }
+
+    const handleProject = () =>{
+        setOpen(false);
+        router.push('/project')
+    }
 
     const handleLogout = () => {
         setOpen(false);
@@ -40,22 +60,22 @@ export default function Sidebar() {
                 className={`fixed top-16 left-0 h-full w-50 bg-(--color-surface) font-bold z-50 transform transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}
             >
                 <Box className='p-4 space-y-3 *:rounded-lg **:p-2'>
-                    <Button onClick={() => setOpen(false)}>
+                    <Button onClick={handleDashboard}>
                         <SpeedIcon sx={{ fontSize: 40 }} />
                         <Typography  >Dashboard</Typography>
                     </Button>
 
-                    <Button onClick={() => setOpen(false)}>
-                        <DashboardIcon sx={{ fontSize: 40 }} />
-                        <Typography  >Lifecycle</Typography>
+                    <Button onClick={handleUserData}>
+                        <PeopleAltIcon sx={{ fontSize: 40 }} />
+                        <Typography  >User data</Typography>
                     </Button>
 
-                    <Button onClick={() => setOpen(false)}>
+                    <Button onClick={handleAnalytics}>
                         <BarChartIcon sx={{ fontSize: 40 }} />
                         <Typography  >Analytics</Typography>
                     </Button>
 
-                    <Button onClick={() => setOpen(false)}>
+                    <Button onClick={handleProject}>
                         <FolderOpenIcon sx={{ fontSize: 40 }} />
                         <Typography  >Project</Typography>
                     </Button>

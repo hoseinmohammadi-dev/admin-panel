@@ -5,15 +5,17 @@ import { useRouter } from 'next/navigation';
 import { darkTheme } from '../theme';
 
 export default function LoginPage() {
+  const [userName , setUserName] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
+  const correctUserName = 'admin';
   const correctPassword = '1234';
 
   const handleLogin = () => {
-    if (password === correctPassword) {
+    if (password === correctPassword && userName === correctUserName) {
       router.push('/dashboard');
     } else {
-      alert('Incorrect password!');
+      alert('Incorrect password or username!');
     }
   };
 
@@ -28,6 +30,15 @@ export default function LoginPage() {
           <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'primary.main' }}>
             Welcome
           </Typography>
+          <TextField
+            label="UserName"
+            placeholder="Try admin"
+            type="text"
+            variant="outlined"
+            fullWidth
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
           <TextField
             label="Password"
             placeholder="Try 1234"
