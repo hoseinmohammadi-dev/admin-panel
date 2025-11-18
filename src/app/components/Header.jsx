@@ -16,7 +16,9 @@ export default function Header({ mode, toggleMode }) {
                 backgroundColor: 'var(--color-surface)',
                 color: 'var(--color-text)',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
-                marginBottom: '50px'
+                marginBottom: '50px',
+                display: 'flex',
+                justifyContent: 'center'
             }}
         >
             <Toolbar sx={{
