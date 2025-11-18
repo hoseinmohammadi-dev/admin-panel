@@ -40,7 +40,7 @@ export default function UserData() {
                 <Header mode={mode} toggleMode={toggleMode} />
 
                 <section className=" flex flex-col lg:flex-row gap-2.5 my-2.5 m-3">
-                    <section className="w-full flex flex-col sm:flex-row gap-2.5 *:rounded-xl">
+                    <section className="w-full flex flex-col md:flex-row gap-2.5 *:rounded-xl">
 
 
                         <section className="w-full md:w-[50%] bg-(--color-surface) p-4">
@@ -55,19 +55,7 @@ export default function UserData() {
                             </section>
                         </section>
 
-                        <section className="w-full md:w-[50%] bg-(--color-surface) p-5">
-                            <section className="bg-(--color-surface) rounded-xl ">
-                                <div className="flex justify-between items-center">
-                                    <Typography variant="h5">Revenue Report</Typography>
-                                    <KebabMenu MySlice={[3, 6]} />
-                                </div>
-                                <div>
-                                    <LineChartComponent />
-                                </div>
-                            </section>
-                        </section>
-                    </section>
-                    <section className="w-full md:w-[60%] bg-(--color-surface) rounded-xl p-2.5">
+                        <section className="w-full md:w-[60%] bg-(--color-surface) rounded-xl p-2.5">
                         <div className="flex justify-between mb-6">
                             <div>
                                 <Typography variant="h6">Weekly Sales</Typography>
@@ -93,6 +81,20 @@ export default function UserData() {
                             </div>
                         </div>
                     </section>
+
+                        <section className="w-full md:w-[50%] bg-(--color-surface) p-5">
+                            <section className="bg-(--color-surface) rounded-xl ">
+                                <div className="flex justify-between items-center">
+                                    <Typography variant="h5">Revenue Report</Typography>
+                                    <KebabMenu MySlice={[3, 6]} />
+                                </div>
+                                <div>
+                                    <LineChartComponent />
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+                    
                 </section>
 
             </Box>
