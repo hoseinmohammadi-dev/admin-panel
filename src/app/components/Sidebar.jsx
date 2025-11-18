@@ -6,7 +6,6 @@ import { Box, Button, Typography } from '@mui/material';
 import SpeedIcon from '@mui/icons-material/Speed';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useRouter } from 'next/navigation';
 
@@ -28,11 +27,6 @@ export default function Sidebar() {
     const handleAnalytics = () =>{
         setOpen(false);
         router.push('/analytics')
-    }
-
-    const handleProject = () =>{
-        setOpen(false);
-        router.push('/project')
     }
 
     const handleLogout = () => {
@@ -73,11 +67,6 @@ export default function Sidebar() {
                     <Button onClick={handleAnalytics}>
                         <BarChartIcon sx={{ fontSize: 40 }} />
                         <Typography  >Analytics</Typography>
-                    </Button>
-
-                    <Button onClick={handleProject}>
-                        <FolderOpenIcon sx={{ fontSize: 40 }} />
-                        <Typography  >Project</Typography>
                     </Button>
 
                     <Button onClick={handleLogout} sx={{ bgcolor:'var(--color-bg)' }}>

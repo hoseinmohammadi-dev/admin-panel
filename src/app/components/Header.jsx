@@ -23,8 +23,8 @@ export default function Header({ mode, toggleMode }) {
                 justifyContent: 'space-between'
             }}>
                 <Sidebar />
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Image src="/icon/logo.svg" width={40} height={40} alt='logo'></Image>
+                <Box sx={{ display: 'flex', justifyContent: 'center' , alignItems:'center' }}>
+                    <Image src="/icon/logo.svg" width={35} height={35} alt='logo'></Image>
                 </Box>
 
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
