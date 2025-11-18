@@ -21,7 +21,6 @@ export default function UserData() {
     return (
         <ThemeProvider theme={mode === 'light' ? lightTheme : darkTheme}>
             <CssBaseline />
-            <Header mode={mode} toggleMode={toggleMode} />
             <Box 
                 sx={{ 
                     width: '100vw',
@@ -31,6 +30,7 @@ export default function UserData() {
                     flexDirection: 'column'
                 }}
             >
+                <Header mode={mode} toggleMode={toggleMode} />
                 <Box sx={{ flex: 1, overflow: 'hidden', p: 3 }}>
                     <UserDataList />
                 </Box>
