@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightTheme, darkTheme } from '../../theme';
-import { Box, CssBaseline } from "@mui/material";
+import { Box, CssBaseline, Container } from "@mui/material";
 import Header from '../components/Header';
+import UserDataList from '../components/userDataList';
 
-export default function userData() {
-
+export default function UserData() {
     const [mode, setMode] = useState('dark');
 
     useEffect(() => {
@@ -17,15 +17,24 @@ export default function userData() {
     const toggleMode = () => {
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
     };
-    return (
 
+    return (
         <ThemeProvider theme={mode === 'light' ? lightTheme : darkTheme}>
             <CssBaseline />
             <Header mode={mode} toggleMode={toggleMode} />
-            <Box className="container mx-auto p-3">
-                User data
-            </Box >
+            <Box 
+                sx={{ 
+                    width: '100vw',
+                    height: '100vh',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column'
+                }}
+            >
+                <Box sx={{ flex: 1, overflow: 'hidden', p: 3 }}>
+                    <UserDataList />
+                </Box>
+            </Box>
         </ThemeProvider>
-
     );
 }
