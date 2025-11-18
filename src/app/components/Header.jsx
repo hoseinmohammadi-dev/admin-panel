@@ -12,6 +12,7 @@ export default function Header({ mode, toggleMode }) {
         <AppBar
             position="sticky"
             sx={{
+                height:'66px',
                 backgroundColor: 'var(--color-surface)',
                 color: 'var(--color-text)',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
